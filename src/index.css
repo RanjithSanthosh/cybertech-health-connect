@@ -2,41 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* CybertechNinja Medical Platform Design System - Professional Medical Theme */
 
 @layer base {
   :root {
+    /* Medical Professional Color Palette */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 220 20% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 220 20% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 220 20% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Medical Primary - Deep Navy Blue */
+    --primary: 220 50% 15%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 220 60% 25%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Medical Secondary - Teal Accent */
+    --secondary: 185 85% 45%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: 185 85% 85%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Professional Grays */
+    --muted: 220 15% 96%;
+    --muted-foreground: 220 10% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 185 85% 95%;
+    --accent-foreground: 220 50% 15%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 15% 90%;
+    --input: 220 15% 95%;
+    --ring: 185 85% 45%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Medical Theme Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(220 50% 15%), hsl(220 60% 8%));
+    --gradient-medical: linear-gradient(135deg, hsl(185 85% 45%), hsl(220 50% 15%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(220 15% 98%));
+    --gradient-glow: radial-gradient(ellipse at center, hsl(185 85% 45% / 0.3), transparent 70%);
+
+    /* Medical Shadows */
+    --shadow-medical: 0 10px 40px -10px hsl(220 50% 15% / 0.3);
+    --shadow-glow: 0 0 60px hsl(185 85% 45% / 0.4);
+    --shadow-card: 0 4px 20px -4px hsl(220 50% 15% / 0.1);
+
+    /* Animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
@@ -101,5 +120,118 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  /* Medical Hero Button Variants */
+  .btn-hero {
+    @apply bg-gradient-to-r from-secondary to-secondary/80 text-secondary-foreground;
+    @apply px-8 py-4 rounded-xl font-semibold tracking-wide;
+    @apply shadow-lg hover:shadow-xl transform hover:-translate-y-1;
+    @apply transition-all duration-300 ease-out;
+    @apply border border-secondary/20 backdrop-blur-sm;
+  }
+
+  .btn-hero:hover {
+    @apply from-secondary/90 to-secondary shadow-glow;
+  }
+
+  .btn-outline-hero {
+    @apply border-2 border-secondary text-secondary bg-transparent;
+    @apply px-8 py-4 rounded-xl font-semibold tracking-wide;
+    @apply hover:bg-secondary hover:text-secondary-foreground;
+    @apply transition-all duration-300 ease-out transform hover:-translate-y-1;
+  }
+
+  /* Medical Card Styles */
+  .medical-card {
+    @apply bg-gradient-to-br from-card to-card/95;
+    @apply border border-border/50 rounded-2xl p-8;
+    @apply shadow-card hover:shadow-medical;
+    @apply transition-all duration-500 ease-out;
+    @apply backdrop-blur-sm hover:-translate-y-2;
+  }
+
+  /* Animated Background Elements */
+  .hero-glow {
+    @apply absolute inset-0 bg-gradient-glow opacity-20 animate-pulse;
+  }
+
+  .floating-element {
+    @apply animate-[float_6s_ease-in-out_infinite];
+  }
+
+  /* Medical Stats Counter */
+  .stats-number {
+    @apply text-4xl font-bold text-secondary;
+    @apply bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent;
+  }
+}
+
+@layer utilities {
+  /* Custom Animations */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(-10px) rotate(1deg); }
+    66% { transform: translateY(-5px) rotate(-1deg); }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* Animation Classes */
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.8s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.6s ease-out forwards;
+  }
+
+  /* Gradient Text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-secondary via-primary to-secondary bg-clip-text text-transparent;
+  }
+
+  /* Medical Background Pattern */
+  .medical-pattern {
+    background-image: 
+      radial-gradient(circle at 20% 80%, hsl(185 85% 45% / 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsl(220 50% 15% / 0.1) 0%, transparent 50%);
   }
 }
