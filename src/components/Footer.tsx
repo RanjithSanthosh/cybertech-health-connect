@@ -1,10 +1,12 @@
 import { Shield, Mail, Phone, MapPin } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Footer = () => {
+  const { ref: footerRef, isVisible: footerVisible } = useScrollAnimation();
   return (
-    <footer className="bg-primary text-primary-foreground py-16">
+    <footer className="bg-primary text-primary-foreground py-16" ref={footerRef}>
       <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-4 gap-8 mb-12">
+        <div className={`grid md:grid-cols-4 gap-8 mb-12 scroll-hidden ${footerVisible ? 'scroll-visible' : ''}`}>
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
