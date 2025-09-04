@@ -19,11 +19,17 @@ const Header = () => {
           </div>
           
           <nav className="hidden md:flex items-center space-x-8">
+            <a href="#about" className="text-muted-foreground hover:text-secondary transition-colors">
+              About
+            </a>
             <a href="#features" className="text-muted-foreground hover:text-secondary transition-colors">
               Features
             </a>
-            <a href="#how-it-works" className="text-muted-foreground hover:text-secondary transition-colors">
-              How It Works
+            <a href="#technology" className="text-muted-foreground hover:text-secondary transition-colors">
+              Technology
+            </a>
+            <a href="#testimonials" className="text-muted-foreground hover:text-secondary transition-colors">
+              Testimonials
             </a>
             <a href="#pricing" className="text-muted-foreground hover:text-secondary transition-colors">
               Pricing
