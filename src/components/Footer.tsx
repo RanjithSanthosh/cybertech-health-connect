@@ -72,7 +72,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3 text-primary-foreground/80">
                 <MapPin className="w-5 h-5" />
-                <span>San Francisco, CA</span>
+                <span>Coimbatore ,Tamilnadu</span>
               </div>
             </div>
           </div>
@@ -82,7 +82,7 @@ const Footer = () => {
         <div className="border-t border-primary-foreground/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-primary-foreground/60">
-              © 2024 CybertechNinja. All rights reserved.
+              © 2025 CybertechNinja. All rights reserved.
             </p>
             <div className="flex space-x-6">
               <a href="#" className="text-primary-foreground/60 hover:text-secondary transition-colors">
