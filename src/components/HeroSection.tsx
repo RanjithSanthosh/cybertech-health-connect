@@ -61,12 +61,12 @@ const HeroSection = () => {
           {/* Main Headline with staggered animation */}
           <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-8">
             <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              <span className="text-white">Building </span>
-              <span className="gradient-text">Multi-Modal AI</span>
+              <span className="text-white drop-shadow-lg">Building </span>
+              <span className="text-white drop-shadow-lg bg-gradient-to-r from-secondary to-secondary-light bg-clip-text text-transparent font-extrabold">Multi-Modal AI</span>
             </div>
             <div className="animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-              <span className="text-white">for </span>
-              <span className="gradient-text">Personalized Medicine</span>
+              <span className="text-white drop-shadow-lg">for </span>
+              <span className="text-white drop-shadow-lg bg-gradient-to-r from-secondary to-secondary-light bg-clip-text text-transparent font-extrabold">Personalized Medicine</span>
             </div>
           </h1>
 
