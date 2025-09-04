@@ -63,6 +63,22 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				medical: {
+					blue: 'hsl(var(--medical-blue))',
+					'blue-dark': 'hsl(var(--medical-blue-dark))',
+					sidebar: 'hsl(var(--medical-sidebar))',
+					'sidebar-hover': 'hsl(var(--medical-sidebar-hover))',
+					'gray-50': 'hsl(var(--medical-gray-50))',
+					'gray-100': 'hsl(var(--medical-gray-100))',
+					'gray-200': 'hsl(var(--medical-gray-200))',
+					'gray-300': 'hsl(var(--medical-gray-300))',
+					'gray-500': 'hsl(var(--medical-gray-500))',
+					'gray-600': 'hsl(var(--medical-gray-600))',
+					'gray-700': 'hsl(var(--medical-gray-700))',
+					'stat-red': 'hsl(var(--stat-red))',
+					'routine-blue': 'hsl(var(--routine-blue))',
+					'yellow-300': 'hsl(var(--yellow-300))'
 				}
 			},
 			backgroundImage: {

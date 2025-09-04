@@ -72,6 +72,23 @@
     --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+     /* Medical Dashboard Colors */
+    --medical-blue: 217 91% 60%;
+    --medical-blue-dark: 213 94% 68%;
+    --medical-sidebar: 213 31% 23%;
+    --medical-sidebar-hover: 213 31% 30%;
+    --yellow-300: 45 93% 47%;
+    --medical-gray-50: 210 40% 98%;
+    --medical-gray-100: 210 40% 96%;
+    --medical-gray-200: 214 32% 91%;
+    --medical-gray-300: 213 27% 84%;
+    --medical-gray-500: 210 9% 53%;
+    --medical-gray-600: 210 9% 45%;
+    --medical-gray-700: 210 10% 23%;
+    --stat-red: 0 84% 60%;
+    --routine-blue: 217 91% 60%;
+
   }
 
   .dark {

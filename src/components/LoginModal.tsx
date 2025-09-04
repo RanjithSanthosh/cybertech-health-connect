@@ -10,6 +10,12 @@ interface LoginModalProps {
 }
 
 const LoginModal = ({ isOpen, onClose }: LoginModalProps) => {
+  const navigateToCenter = () => {
+    window.location.href = '/center';
+  };
+  const navigateToDoctor = () => {
+    window.location.href = '/doctor';
+  };
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-2xl p-0 bg-background border-border/50">
@@ -44,7 +50,7 @@ const LoginModal = ({ isOpen, onClose }: LoginModalProps) => {
                 Upload patient scans and manage diagnostic cases efficiently through our secure platform
               </p>
               
-              <Button className="w-full btn-hero group-hover:shadow-glow">
+              <Button className="w-full btn-hero group-hover:shadow-glow" onClick={navigateToCenter}>
                 Access Portal
               </Button>
             </div>
@@ -71,7 +77,7 @@ const LoginModal = ({ isOpen, onClose }: LoginModalProps) => {
                 Review and analyze medical scans using advanced OHIF viewers and earn competitive compensation
               </p>
               
-              <Button className="w-full btn-hero group-hover:shadow-glow">
+              <Button className="w-full btn-hero group-hover:shadow-glow" onClick={navigateToDoctor}>
                 Expert Login
               </Button>
             </div>
